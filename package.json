@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@eslint/js": "^8.52.0"
+  }
+}
