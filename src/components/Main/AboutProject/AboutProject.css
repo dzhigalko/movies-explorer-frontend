@@ -1,0 +1,142 @@
+.about-project {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 110px 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project {
+      padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .about-project {
+      padding: 70px 18px;
+  }
+}
+
+.about-project__bar {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__bar {
+     grid-template-columns: 21% 79%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .about-project__bar {
+     grid-template-columns: 35% 65%;
+  }
+}
+
+.about-project__caption {
+  color: #A0A0A0;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  padding: 14px 0 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 610px) {
+  .about-project__caption {
+      font-size: 11px;
+      padding: 9px 0 0;
+  }
+}
+
+.about-project__description {
+  margin: 70px 0 110px 0;
+  display: grid;
+  gap: 26px 40px;
+  grid-template-columns: minmax(min-content,550px) minmax(min-content,550px);
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__description {
+      margin-bottom: 94px;
+      gap: 22px 30px;
+      grid-template-columns: minmax(min-content,319px) minmax(min-content,319px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__description {
+      margin: 5px 0 60px;
+      gap: 0;
+      grid-template-columns: minmax(min-content,284px);
+  }
+}
+
+.about-project__subtitle {
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__subtitle {
+      font-size: 12px;
+      line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__subtitle {
+      font-size: 11px;
+      line-height: 16px;
+      margin-top: 16px;
+  }
+}
+
+.about-project__time {
+  order: -1;
+  background-color: #2BE080;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 9px 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 610px) {
+  .about-project__time  {
+      font-size: 11px;
+      padding: 11px 0;
+  }
+}
+
+.about-project__time_theme_grey {
+  background-color: #F2F2F2;
+}
+
+.about-project__title {
+  order: -1;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__title  {
+      order: 0;
+      font-size: 18px;
+      margin-top: 56px;
+  }
+}

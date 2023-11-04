@@ -1,0 +1,137 @@
+.menu {
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+}
+
+.menu__btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  padding: 8px 8px 0;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__btn {
+    gap: 6,5px;
+    padding: 10px 9px 0; 
+  }
+}
+
+.menu__btn-line {
+  background-color: #fff;
+  width: 28px;
+  height: 3px; 
+}
+
+@media screen and (max-width: 320px) {
+  .menu__btn-line {
+    width: 22px;
+    height: 2px; 
+  }
+}
+
+.menu__btn-line_white {
+  background-color: #000;
+}
+
+.menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu__overlay_visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.menu__content {
+  background-color: #fff;
+  z-index: 1;
+  width: 520px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__content {
+    width: 100%;
+  }
+}
+
+.menu__btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  right: 23px;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__btn-close {
+    top: 13px;
+    right: 13px;
+  }
+}
+
+.menu__links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 159px auto 90px;
+  height: 775px;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__links-container {
+    margin: 144px auto 46px;
+    height: 590px;
+  }
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .menu__links {
+    gap: 17px;
+  }
+}
+
+.menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 7px;
+  line-height: normal;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__link_active {
+  border-bottom: 2px solid #000;
+}

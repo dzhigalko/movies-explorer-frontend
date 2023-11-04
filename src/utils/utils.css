@@ -1,0 +1,65 @@
+.page__title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 0 23px 0;
+  margin: 0;
+  letter-spacing: -0.04em;
+  border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width: 610px) {
+  .page__title{
+      font-size: 18px;
+      padding-bottom: 28px;
+  }
+}
+
+.link-style {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.link-style:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  background-image: url(../images/logo.svg);
+  background-size: cover;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 70px auto 39px;
+  width: 396px;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome {
+    margin: 232px auto 39px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .welcome {
+    align-items: center;
+    gap: 50px;
+    margin: 56px auto 80px;
+    width: 260px;
+  }
+}
+
+.welcome__text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}

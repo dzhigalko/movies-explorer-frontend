@@ -1,0 +1,28 @@
+.profile-button {
+  display: flex;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 12px;
+  background-color: #2BE080;
+  border-radius: 25px;
+  width: 100px;
+  height: 32px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 4px 0 11px;
+}
+
+.profile-button__icon {
+  width: 13px;
+  height: 13px;
+  padding: 6px;
+  background-color: #F9F9F9;
+  border-radius: 13px;
+  margin-left: 8px;
+}
+
+.profile-button_theme_white {
+  background-color: #fff;
+  filter: drop-shadow(0 3px 14px rgba(0,0,0,.08));
+}
