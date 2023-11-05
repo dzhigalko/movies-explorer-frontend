@@ -11,10 +11,10 @@ const AuthenticatedHeader = ({theme}) => {
     <>
       <div className="navigation">
         <nav className='navigation__links'>
-          <NavLink to="/movies/list" className={({isActive}) => `navigation__link link-style ${theme && 'navigation__link_theme_' + theme} ${isActive ? 'navigation__link_current' : ''}`}>
+          <NavLink to="/movies" className={({isActive}) => `navigation__link link-style ${theme && 'navigation__link_theme_' + theme} ${isActive ? 'navigation__link_current' : ''}`}>
             Фильмы
           </NavLink>
-          <NavLink to="/movies/saved" className={({isActive}) => `navigation__link link-style ${theme && 'navigation__link_theme_' + theme} ${isActive ? 'navigation__link_current' : ''}`}>
+          <NavLink to="/saved-movies" className={({isActive}) => `navigation__link link-style ${theme && 'navigation__link_theme_' + theme} ${isActive ? 'navigation__link_current' : ''}`}>
             Сохранённые фильмы
           </NavLink>
         </nav>
@@ -29,8 +29,8 @@ const SignHeader = () => {
   return (
     <>
       <div className="header__buttons">
-        <Link to="/sign-up" className="header__button link-style" alt="Регистрация">Регистрация</Link>
-        <Link to="/sign-in" className="header__button header__button_type_signin link-style" alt="Войти">Войти</Link>
+        <Link to="/signup" className="header__button link-style" alt="Регистрация">Регистрация</Link>
+        <Link to="/signin" className="header__button header__button_type_signin link-style" alt="Войти">Войти</Link>
       </div>
     </>
   );

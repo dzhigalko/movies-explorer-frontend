@@ -40,10 +40,10 @@ export default function Menu({ theme }) {
                 <NavLink to="/" className={({isActive}) => `menu__link link-style ${isActive && 'menu__link_active'}`}>Главная</NavLink>
               </li>
               <li className="menu__link">
-                <NavLink to="/movies/list" className={({isActive}) => `menu__link link-style ${isActive && 'menu__link_active'}`}>Фильмы</NavLink>
+                <NavLink to="/movies" className={({isActive}) => `menu__link link-style ${isActive && 'menu__link_active'}`}>Фильмы</NavLink>
               </li>
               <li className="menu__link">
-                <NavLink to="/movies/saved" className={({isActive}) => `menu__link link-style ${isActive && 'menu__link_active'}`}>Сохранённые фильмы</NavLink>
+                <NavLink to="/saved-movies" className={({isActive}) => `menu__link link-style ${isActive && 'menu__link_active'}`}>Сохранённые фильмы</NavLink>
               </li>
             </ul>
             <ProfileButton theme="white"/>

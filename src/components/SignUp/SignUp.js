@@ -8,7 +8,7 @@ export default function SignUp() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/sign-in")
+    navigate("/signin")
   }
 
   return (
@@ -46,7 +46,7 @@ export default function SignUp() {
         />
         <Controls>
           <Button text="Зарегистрироваться"/>
-          <Navigation>Уже зарегистрированы? <FormLink to="/sign-in">Войти</FormLink></Navigation>
+          <Navigation>Уже зарегистрированы? <FormLink to="/signin">Войти</FormLink></Navigation>
         </Controls>
       </Form>
     </>

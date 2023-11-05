@@ -13,8 +13,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<PageLayout.NoHeaderAndFooter/>}>
-          <Route path="/sign-in" element={<SignIn/>}/>
-          <Route path="/sign-up" element={<SignUp/>}/>
+          <Route path="/signin" element={<SignIn/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
           <Route path="*" element={<Error/>}/>
         </Route>
         <Route element={<PageLayout.Default/>}>
@@ -24,8 +24,8 @@ export default function App() {
           <Route path="/profile" element={<Profile/>}/>
         </Route>
         <Route element={<PageLayout.Default theme="white"/>}>
-          <Route path="/movies/saved" element={<Movies.Saved/>}/>
-          <Route path="/movies/list" element={<Movies.List/>}/>
+          <Route path="/saved-movies" element={<Movies.Saved/>}/>
+          <Route path="/movies" element={<Movies.List/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

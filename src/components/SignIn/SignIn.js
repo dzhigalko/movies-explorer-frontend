@@ -39,7 +39,7 @@ export default function SignIn() {
         />
         <Controls>
           <Button text="Войти"/>
-          <Navigation>Ещё не зарегистрированы? <FormLink to="/sign-up">Регистрация</FormLink></Navigation>
+          <Navigation>Ещё не зарегистрированы? <FormLink to="/signup">Регистрация</FormLink></Navigation>
         </Controls>
       </Form>
     </>
