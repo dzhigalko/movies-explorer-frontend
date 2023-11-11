@@ -1,0 +1,118 @@
+.techs {
+  width: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 101px 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .techs {
+      padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .techs {
+      background-color: #fff;
+      padding: 70px 18px;
+  }
+}
+
+.techs__element {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.04em;
+  padding: 21px 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #E8E8E8;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__element {
+      font-size: 12px;
+  }
+}
+
+.techs__list {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  grid-template-columns: repeat(7,minmax(90px,max-content));
+  gap: 10px;
+}
+
+@media screen and (max-width: 877px) {
+  .techs__list {
+      grid-template-columns: repeat(7,minmax(84px,max-content));
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .techs__list {
+      grid-template-columns: repeat(4,minmax(84px,max-content));
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .techs__list {
+      grid-template-columns: repeat(2,minmax(84px,max-content));
+  }
+}
+
+.techs__subtitle {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  padding: 0;
+  margin: 0 auto 100px;
+  max-width: 460px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__subtitle {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 83px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .techs__subtitle {
+      font-size: 11px;
+      line-height: 16px;
+      margin-bottom: 50px;
+  }
+}
+
+.techs__title {
+  color: #000;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  padding: 0;
+  margin: 90px auto 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__title {
+      margin: 80px auto 22px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .techs__title {
+      font-size: 30px;
+      line-height: normal;
+      margin: 60px auto 24px;
+  }
+}

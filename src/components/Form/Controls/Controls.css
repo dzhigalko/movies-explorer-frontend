@@ -1,0 +1,25 @@
+.form-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-controls {
+    margin-bottom: 232px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .form-controls {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,13 @@
+.form-navigation {
+  text-align: center;
+  color: #A0A0A0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 510px) {
+  .form-navigation  {
+    font-size: 12px;
+  }
+}

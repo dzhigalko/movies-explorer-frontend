@@ -1,0 +1,24 @@
+.more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 80px;
+}
+
+.more__button {
+  border: none;
+  background-color: #F9F9F9;
+  width: 320px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 6px;
+  padding: 0;
+}
+
+@media screen and (max-width: 610px) {
+  .more__button {
+    width: 240px;
+  }
+}
