@@ -1,0 +1,37 @@
+services:
+  frontend:
+    profiles:
+      - default
+    restart: always
+    build:
+      context: .
+      args:
+        - NODE_ENV=$NODE_ENV
+        - REACT_APP_MAIN_API_URL=$REACT_APP_MAIN_API_URL
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - ".env"
+    external_links:
+      - "movies-explorer-api-backend:backend"
+    volumes:
+      - movies-explorer-api_certbot-etc:/etc/letsencrypt
+      - movies-explorer-api_certbot-var:/var/lib/letsencrypt
+      - movies-explorer-api_certbot-www:/usr/share/nginx/html/certbot
+
+  certbot:
+    image: certbot/certbot
+    restart: "no"
+    volumes:
+      - movies-explorer-api_certbot-etc:/etc/letsencrypt
+      - movies-explorer-api_certbot-var:/var/lib/letsencrypt
+      - movies-explorer-api_certbot-www:/usr/share/nginx/html/certbot
+
+volumes:
+  movies-explorer-api_certbot-etc:
+    external: true
+  movies-explorer-api_certbot-var:
+    external: true
+  movies-explorer-api_certbot-www:
+    external: true
