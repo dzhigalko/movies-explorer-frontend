@@ -12,6 +12,12 @@
   padding: 0;
 }
 
+.button_disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  cursor: default;
+}
+
 @media screen and (max-width: 510px) {
   .button {
     margin-bottom: 14px;

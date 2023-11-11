@@ -4,6 +4,7 @@ import Button from "./Button";
 import Controls from "./Controls";
 import Link from "./Link";
 import Navigation from "./Navigation";
+import Error from "./Error";
 
 export {
   Form,
@@ -11,5 +12,6 @@ export {
   Button,
   Controls,
   Link,
-  Navigation
+  Navigation,
+  Error
 }
