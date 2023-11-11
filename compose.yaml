@@ -14,7 +14,7 @@ services:
     env_file:
       - ".env"
     external_links:
-      - "movies-explorer-api-backend:backend"
+      - "movies-explorer-api-backend-1:backend"
     volumes:
       - movies-explorer-api_certbot-etc:/etc/letsencrypt
       - movies-explorer-api_certbot-var:/var/lib/letsencrypt
