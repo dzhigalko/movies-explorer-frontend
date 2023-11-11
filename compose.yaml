@@ -1,7 +1,7 @@
 services:
   frontend:
-    profiles:
-      - default
+    networks:
+      - movies-explorer-api_default
     restart: always
     build:
       context: .
@@ -34,4 +34,7 @@ volumes:
   movies-explorer-api_certbot-var:
     external: true
   movies-explorer-api_certbot-www:
+    external: true
+networks:
+  movies-explorer-api_default:
     external: true
