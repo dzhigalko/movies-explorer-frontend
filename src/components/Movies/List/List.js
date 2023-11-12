@@ -60,7 +60,7 @@ export default function List() {
   }, [favoriteMoviesIds])
 
   useEffect(() => {
-    if (searchFilter.isMoviesLoaded) {
+    if (filterState.isMoviesLoading) {
       setFilterState({searchFilter: filterState.searchFilter, shortsFilter: filterState.shortsFilter})
     }
   }, [movies])
@@ -104,7 +104,7 @@ export default function List() {
     }
 
     if (movies.length === 0) {
-      setFilterState({searchFilter: searchFilter, shortsFilter: shortsFilter, isMoviesLoaded: false})
+      setFilterState({searchFilter: searchFilter, shortsFilter: shortsFilter, isMoviesLoading: true})
       setIsLoading(true)
 
       moviesApi.getMovies()
