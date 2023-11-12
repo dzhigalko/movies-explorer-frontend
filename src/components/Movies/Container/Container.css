@@ -24,6 +24,11 @@
   padding: 0;
 }
 
+.movies__list__error {
+  text-align: center;
+  flex-grow: 1;
+}
+
 @media screen and (max-width: 1279px) {
   .movies__list {
     grid-template-columns: repeat(2,minmax(339px,max-content));

@@ -4,9 +4,9 @@ import Base from "../Base";
 import Header from "../../Header";
 import Footer from '../../Footer';
 
-export default function Default({theme}) {
+export default function Default({theme, isLoading}) {
   return (
-    <Base>
+    <Base isLoading={isLoading}>
       <Header theme={theme}/>
       <Outlet/>
       <Footer/>

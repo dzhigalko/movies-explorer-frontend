@@ -1,19 +1,20 @@
 import { useState } from "react";
 import AuthContext from "../../contexts/AuthContext";
+import useSavedData from "../../hooks/useSavedData";
 
 export default function AuthProvider({ children }) {  
-  const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated"));
+  const {resetSavedMoviesSearch} = useSavedData()
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const login = (handleLogin) => {
-    localStorage.setItem("isAuthenticated", true)
     setIsAuthenticated(true)
 
     if (handleLogin) handleLogin()
   }
 
   const logout = (handleLogout) => {
-    localStorage.setItem("isAuthenticated", false)
     setIsAuthenticated(false)
+    resetSavedMoviesSearch()
 
     if (handleLogout) handleLogout()
   }
