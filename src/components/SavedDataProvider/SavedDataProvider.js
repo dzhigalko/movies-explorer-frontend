@@ -5,7 +5,7 @@ import SavedDataContext from "../../contexts/SavedDataContext";
 const DEFAULT_MOVIES_SEARCH = {
   searchFilter: '',
   shortsFilter: false,
-  filteredMovies: []
+  movies: []
 }
 
 export default function SavedDataProvider({children}) {
@@ -16,11 +16,11 @@ export default function SavedDataProvider({children}) {
 
   const [savedMoviesSearch, setSavedMoviesSearch] = useState(lsSavedMoviesSearch || DEFAULT_MOVIES_SEARCH)
 
-  const saveMoviesSearch = (searchFilter, shortsFilter, filteredMovies) => {
+  const saveMoviesSearch = (searchFilter, shortsFilter, movies) => {
     const data = {
       searchFilter: searchFilter,
       shortsFilter: shortsFilter,
-      filteredMovies: filteredMovies
+      movies: movies
     }
     localStorage.setItem('moviesSearch', JSON.stringify(data))
     setSavedMoviesSearch(data)

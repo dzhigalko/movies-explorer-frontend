@@ -80,6 +80,7 @@ export default function Profile() {
             placeholder=""
             value={formState.values.email}
             onChange={handleChange}
+            pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
           />
         </label>
         <span className="profile__input-error">{ !formState.validity.email && formState.validationMessages.email }</span>

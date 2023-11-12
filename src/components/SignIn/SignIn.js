@@ -10,13 +10,17 @@ import {RESPONSE_CODES} from "../../utils/constants";
 
 export default function SignIn() {
   const navigate = useNavigate()
-  const {login} = useAuth();
+  const {login, isAuthenticated} = useAuth();
   const [apiError, setApiError] = useState('')
   const {mainApi} = useMainApi()
   const {formState, handleChange} = useForm({
     email: true,
     password: true
   })
+
+  if (isAuthenticated) {
+    return navigate("/movies")
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -51,6 +55,7 @@ export default function SignIn() {
           validationMessage={formState.validationMessages.email}
           value={formState.values.email}
           onChange={handleChange}
+          pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
         />
         <Input
           label="Пароль"

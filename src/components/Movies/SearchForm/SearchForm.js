@@ -3,29 +3,28 @@ import { useState } from 'react';
 import './SearchForm.css';
 import '../../../utils/utils.css';
 
-export default function SeachForm({ handleFilterChange, seachFilterDefaultValue, shortsFilterDefaultValue }) {
+export default function SeachForm({ handleSubmit, seachFilterDefaultValue, shortsFilterDefaultValue }) {
   const [searchFilter, setSearchFilter] = useState(seachFilterDefaultValue || '');
   const [shortsFilter, setShortsFilter] = useState(shortsFilterDefaultValue || false);
 
   const handleSearchFilterChange = (event) => {
     const value = event.target.value
     setSearchFilter(value)
-    handleFilterChange(value, shortsFilter)
   }
 
   const handleShortsFilterChange = () => {
     const value = !shortsFilter
     setShortsFilter(value)
-    handleFilterChange(searchFilter, value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmitInternal = (event) => {
     event.preventDefault()
+    handleSubmit(searchFilter, shortsFilter)
   } 
 
   return (
     <section className="search">
-      <form className="search__form" noValidate={true} onSubmit={handleSubmit}>
+      <form className="search__form" noValidate={true} onSubmit={handleSubmitInternal}>
         <input className="search__input" type="text" placeholder="Фильм" value={searchFilter} onChange={handleSearchFilterChange}/>
         <button className="search__button link-style" type="submit" aria-label="Найти">Найти</button>
       </form>

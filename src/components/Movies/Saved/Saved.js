@@ -5,6 +5,7 @@ import Card from '../Card';
 import SeachForm from '../SearchForm';
 import useMainApi from '../../../hooks/useMainApi';
 import Preloader from '../../Preloader';
+import { SHORT_MOVIE_TIME } from '../../../utils/constants';
 
 export default function Saved() {
   const [movies, setMovies] = useState([])
@@ -20,7 +21,7 @@ export default function Saved() {
     mainApi.getFavoriteMovies()
       .then((movies) => {
         setMovies(movies.map((m) => {
-          return {...m, isShort: m.duration <= 40}
+          return {...m, isShort: m.duration <= SHORT_MOVIE_TIME}
         }))
       })
       .catch((error) => {
@@ -63,7 +64,7 @@ export default function Saved() {
       }
   }, [movies, filterState])
 
-  const handleFilterChange = (searchFilter, shortsFilter) => {
+  const handleSearchFormSubmit = (searchFilter, shortsFilter) => {
     setFilterState({...filterState, searchFilter: searchFilter, shortsFilter: shortsFilter})
   }
 
@@ -79,13 +80,13 @@ export default function Saved() {
 
   return (
     <>
-      <SeachForm handleFilterChange={handleFilterChange} seachFilterDefaultValue={filterState.searchFilter} shortsFilterDefaultValue={filterState.shortsFilter}/>
+      <SeachForm handleSubmit={handleSearchFormSubmit} seachFilterDefaultValue={filterState.searchFilter} shortsFilterDefaultValue={filterState.shortsFilter}/>
       {isLoading ? <Preloader/> : 
       (searchError ? <div className="movies__list__error">{searchError}</div> :
         <Container>
           {filteredMovies.map((m, i) => {
             return <Card
-              key={i}
+              key={m._id}
               image={m.thumbnail}
               name={m.nameRU}
               duration={m.duration}

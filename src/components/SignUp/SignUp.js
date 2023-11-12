@@ -11,13 +11,17 @@ import {RESPONSE_CODES} from "../../utils/constants";
 export default function SignUp() {
   const navigate = useNavigate()
   const {mainApi} = useMainApi()
-  const {login} = useAuth()
+  const {login, isAuthenticated} = useAuth()
   const [apiError, setApiError] = useState('')
   const {formState, handleChange} = useForm({
     name: true,
     email: true,
     password: true
   })
+
+  if (isAuthenticated) {
+    return navigate("/movies")
+  }
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -68,6 +72,7 @@ export default function SignUp() {
           validationMessage={formState.validationMessages.email}
           value={formState.values.email}
           onChange={handleChange}
+          pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
         />
         <Input
           label="Пароль"
