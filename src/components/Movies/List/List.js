@@ -60,7 +60,9 @@ export default function List() {
   }, [favoriteMoviesIds])
 
   useEffect(() => {
-    setFilterState({searchFilter: filterState.searchFilter, shortsFilter: filterState.shortsFilter})
+    if (searchFilter.isMoviesLoaded) {
+      setFilterState({searchFilter: filterState.searchFilter, shortsFilter: filterState.shortsFilter})
+    }
   }, [movies])
 
   useEffect(() => {
