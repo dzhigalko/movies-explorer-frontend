@@ -60,6 +60,10 @@ export default function List() {
   }, [favoriteMoviesIds])
 
   useEffect(() => {
+    setFilterState(filterState)
+  }, [movies])
+
+  useEffect(() => {
     if (movies.length === 0) {
       return
     }
@@ -89,7 +93,7 @@ export default function List() {
     } else {
       setSearchError('')
     }
-  }, [movies, filterState])
+  }, [filterState])
 
   const handleSearchFormSubmit = (searchFilter, shortsFilter) => {
     if (!searchFilter) {
