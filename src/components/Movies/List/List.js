@@ -60,7 +60,7 @@ export default function List() {
   }, [favoriteMoviesIds])
 
   useEffect(() => {
-    setFilterState(filterState)
+    setFilterState({searchFilter: filterState.searchFilter, shortsFilter: filterState.shortsFilter})
   }, [movies])
 
   useEffect(() => {
@@ -102,6 +102,7 @@ export default function List() {
     }
 
     if (movies.length === 0) {
+      setFilterState({searchFilter: searchFilter, shortsFilter: shortsFilter, isMoviesLoaded: false})
       setIsLoading(true)
 
       moviesApi.getMovies()
@@ -124,9 +125,9 @@ export default function List() {
         .finally(() => {
           setIsLoading(false)
         })
+    } else {
+      setFilterState({searchFilter: searchFilter, shortsFilter: shortsFilter})
     }
-
-    setFilterState({searchFilter: searchFilter, shortsFilter: shortsFilter})
   }
 
   const handleMoreClick = () => {
